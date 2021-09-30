@@ -42,6 +42,14 @@ class MainPage extends StatelessWidget {
                 title: 'Random numbers',
                 onPressed: () => navigateToNumberTrivia(context),
                 icon: Icons.monetization_on_sharp,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              FliipaButton(
+                title: 'Léase este',
+                onPressed: () => navigateToBarcodeScanner(context),
+                icon: Icons.qr_code,
               )
             ],
           ),
@@ -53,5 +61,10 @@ class MainPage extends StatelessWidget {
   void navigateToNumberTrivia(BuildContext context) {
     final router = AutoRouter.of(context);
     router.push(const NumberTriviaRoute());
+  }
+
+  void navigateToBarcodeScanner(BuildContext context) {
+    final router = AutoRouter.of(context);
+    router.push(const BarcodeScannerRoute());
   }
 }
