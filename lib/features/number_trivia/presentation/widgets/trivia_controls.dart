@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_architecture_poc/core/presentation/widgets/fliipa_button.dart';
 import 'package:flutter_clean_architecture_poc/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -40,16 +41,20 @@ class _TriviaControlsState extends State<TriviaControls> {
         Row(
           children: <Widget>[
             Expanded(
-                child: ElevatedButton(
-              child: const Text('Search'),
+                child: FliipaButton(
+              title: 'Search',
+              fontSize: 16,
+              padding: 10,
               onPressed: dispatchConcrete,
             )),
             const SizedBox(
               width: 10,
             ),
             Expanded(
-                child: ElevatedButton(
-              child: const Text('Get random trivia'),
+                child: FliipaButton(
+              title: 'Get random trivia',
+              fontSize: 16,
+              padding: 10,
               onPressed: dispatchRandom,
             ))
           ],

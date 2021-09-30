@@ -11,7 +11,7 @@ class NumberTriviaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Number Trivia')),
+      appBar: AppBar(title: Text('Number Trivia',style: TextStyle(color: Theme.of(context).accentColor),),backgroundColor: Theme.of(context).primaryColor,),
       body: SingleChildScrollView(child: buildBody(context)),
     );
   }
