@@ -25,14 +25,14 @@ class MainPage extends StatelessWidget {
             children: <Widget>[
               Container(
                 child: Image.network(
-                    'https://1000marcas.net/wp-content/uploads/2019/12/Star-Wars-Logo-5.png'),
+                    'https://logopond.com/logos/31dacb3314cbbf3977cce6a9eeffddd3.png'),
               ),
               const SizedBox(
                 height: 10,
               ),
               FliipaButton(
                 title: 'Enchulame la máquina',
-                onPressed: () {},
+                onPressed: () => showPimpMyRideDialog(context),
                 icon: Icons.car_repair_rounded,
               ),
               const SizedBox(
@@ -56,6 +56,25 @@ class MainPage extends StatelessWidget {
         ),
       )),
     );
+  }
+
+  Future showPimpMyRideDialog(BuildContext context) {
+    return showDialog<String>(
+        context: context,
+        builder: (_) => AlertDialog(
+              title: const Text('Lo sentimos!'),
+              content: const Text('Tu carro está muy peye para tunear.'),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () => Navigator.pop(context, 'Cancel'),
+                  child: const Text('Cancel'),
+                ),
+                TextButton(
+                  onPressed: () => Navigator.pop(context, 'OK'),
+                  child: const Text('OK'),
+                ),
+              ],
+            ));
   }
 
   void navigateToNumberTrivia(BuildContext context) {
