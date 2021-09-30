@@ -30,26 +30,44 @@ class MainPage extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              FliipaButton(
-                title: 'Enchulame la máquina',
-                onPressed: () => showPimpMyRideDialog(context),
-                icon: Icons.car_repair_rounded,
+              Row(
+                children: [
+                  Expanded(
+                    child: FliipaButton(
+                      title: 'Pimp my ride',
+                      onPressed: () => showPimpMyRideDialog(context),
+                      icon: Icons.car_repair_rounded,
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(
                 height: 10,
               ),
-              FliipaButton(
-                title: 'Random numbers',
-                onPressed: () => navigateToNumberTrivia(context),
-                icon: Icons.monetization_on_sharp,
+              Row(
+                children: [
+                  Expanded(
+                     child: FliipaButton(
+                      title: 'Random numbers',
+                      onPressed: () => navigateToNumberTrivia(context),
+                      icon: Icons.monetization_on_sharp,
+                                 ),
+                   ),
+                ],
               ),
               const SizedBox(
                 height: 10,
               ),
-              FliipaButton(
-                title: 'Léase este',
-                onPressed: () => navigateToBarcodeScanner(context),
-                icon: Icons.qr_code,
+              Row(
+                children: [
+                  Expanded(
+                    child: FliipaButton(
+                      title: 'Barcode scanner',
+                      onPressed: () => navigateToBarcodeScanner(context),
+                      icon: Icons.qr_code,
+                    ),
+                  ),
+                ],
               )
             ],
           ),
