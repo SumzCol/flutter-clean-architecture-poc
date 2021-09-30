@@ -1,9 +1,9 @@
 import 'package:mocktail/mocktail.dart';
 import 'dart:convert';
 
-import 'package:flutter_application_1/core/error/exception.dart';
-import 'package:flutter_application_1/features/number_trivia/data/datasources/number_trivia_local_datasource.dart';
-import 'package:flutter_application_1/features/number_trivia/data/models/number_trivia_model.dart';
+import 'package:flutter_clean_architecture_poc/core/error/exception.dart';
+import 'package:flutter_clean_architecture_poc/features/number_trivia/data/datasources/number_trivia_local_datasource.dart';
+import 'package:flutter_clean_architecture_poc/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

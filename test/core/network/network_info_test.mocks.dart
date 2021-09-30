@@ -4,7 +4,7 @@
 
 import 'dart:async' as _i3;
 
-import 'package:flutter_application_1/core/network/network_checker.dart' as _i2;
+import 'package:flutter_clean_architecture_poc/core/network/network_checker.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: avoid_redundant_argument_values

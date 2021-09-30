@@ -1,4 +1,4 @@
-import 'package:flutter_application_1/injection.config.dart';
+import 'package:flutter_clean_architecture_poc/injection.config.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 

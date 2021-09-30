@@ -1,0 +1,25 @@
+{
+  "autorun": true,
+  "autokill": true,
+  "terminals": [
+    {
+      "name": "code-generation",
+      "description": "For running code generation tool to ease development",
+      "open": true,
+      "focus": true,
+      "commands": ["flutter pub run build_runner watch --delete-conflicting-outputs"]
+    },
+    {
+      "name": "ci/cd",
+      "description": "For running CI/CD commands",
+      "open": true,
+      "focus": false
+    },
+    {
+      "name": "git",
+      "description": "For running git commands",
+      "open": true,
+      "focus": false
+    }
+  ]
+}

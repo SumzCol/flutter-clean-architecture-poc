@@ -1,5 +1,5 @@
-import 'package:flutter_application_1/core/network/network_checker.dart';
-import 'package:flutter_application_1/core/network/network_info.dart';
+import 'package:flutter_clean_architecture_poc/core/network/network_checker.dart';
+import 'package:flutter_clean_architecture_poc/core/network/network_info.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
