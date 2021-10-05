@@ -1,12 +1,10 @@
 import 'package:flutter_clean_architecture_poc/core/network/network_checker.dart';
 import 'package:flutter_clean_architecture_poc/core/network/network_info.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/annotations.dart';
-import 'package:mockito/mockito.dart';
+import 'package:mocktail/mocktail.dart';
 
-import 'network_info_test.mocks.dart';
+class MockNetworkChecker extends Mock implements NetworkChecker{}
 
-@GenerateMocks([NetworkChecker])
 void main() {
   late NetworkInfoImpl networkInfo;
   late MockNetworkChecker mockDataConnectionChecker;
@@ -21,11 +19,11 @@ void main() {
         () async {
       final tHasConnectionFuture = Future.value(true);
 
-      when(mockDataConnectionChecker.hasConnection)
+      when(()=> mockDataConnectionChecker.hasConnection)
           .thenAnswer((_) => tHasConnectionFuture);
 
       final result = networkInfo.isConnected;
-      verify(mockDataConnectionChecker.hasConnection);
+      verify(()=> mockDataConnectionChecker.hasConnection);
       expect(result, tHasConnectionFuture);
     });
   });

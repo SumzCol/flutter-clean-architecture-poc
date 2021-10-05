@@ -20,7 +20,7 @@ class FliipaButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
-      fillColor: Theme.of(context).accentColor,
+      fillColor: Theme.of(context).colorScheme.secondary,
       splashColor: Colors.grey,
       child: Padding(
         padding: EdgeInsets.all(padding),
@@ -30,7 +30,7 @@ class FliipaButton extends StatelessWidget {
             icon != null
                 ? Icon(
                     icon,
-                    color: Colors.purple[100],
+                    color: Theme.of(context).colorScheme.secondaryVariant,
                   )
                 : const SizedBox(),
             const SizedBox(
@@ -39,7 +39,9 @@ class FliipaButton extends StatelessWidget {
             Text(
               title,
               maxLines: 1,
-              style: TextStyle(color: Colors.white, fontSize: fontSize),
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.secondaryVariant,
+                  fontSize: fontSize),
             )
           ],
         ),

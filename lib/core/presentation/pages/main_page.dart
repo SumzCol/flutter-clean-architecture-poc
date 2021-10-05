@@ -13,9 +13,7 @@ class MainPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Fliipa PoC',
-          style: TextStyle(color: Theme.of(context).accentColor),
         ),
-        backgroundColor: Theme.of(context).primaryColor,
       ),
       body: SingleChildScrollView(
           child: Center(
@@ -23,10 +21,7 @@ class MainPage extends StatelessWidget {
           padding: const EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
-              Container(
-                child: Image.network(
-                    'https://logopond.com/logos/31dacb3314cbbf3977cce6a9eeffddd3.png'),
-              ),
+              Text('Fliipa', style: Theme.of(context).textTheme.headline1,),
               const SizedBox(
                 height: 10,
               ),
