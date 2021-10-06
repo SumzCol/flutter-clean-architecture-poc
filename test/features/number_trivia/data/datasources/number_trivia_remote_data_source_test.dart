@@ -23,7 +23,7 @@ void main() {
   void setUpMockHttpClientSuccess200() {
     when(() => mockHttpClient.get(any(that: isNotNull),
             headers: any(named: 'headers', that: isNotNull)))
-        .thenAnswer((_) async => http.Response(fixture('trivia.json'), 200));
+        .thenAnswer((_) async => http.Response(fixture('number_trivia/trivia.json'), 200));
   }
 
   void setUpMockHttpClientFailure404() {
@@ -35,7 +35,7 @@ void main() {
   group('getConcreteNumberTrivia', () {
     const tNumber = 1;
     final tNumberTriviaModel =
-        NumberTriviaModel.fromJson(json.decode(fixture('trivia.json')));
+        NumberTriviaModel.fromJson(json.decode(fixture('number_trivia/trivia.json')));
     final tUri = Uri.parse('http://numbersapi.com/$tNumber');
 
     setUp(() {
@@ -75,7 +75,7 @@ void main() {
 
   group('getRandomNumberTrivia', () {
     final tNumberTriviaModel =
-        NumberTriviaModel.fromJson(json.decode(fixture('trivia.json')));
+        NumberTriviaModel.fromJson(json.decode(fixture('number_trivia/trivia.json')));
     final tUri = Uri.parse('http://numbersapi.com/random');
 
     setUp(() {
