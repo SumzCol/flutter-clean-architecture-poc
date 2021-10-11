@@ -25,6 +25,10 @@ class UserModel extends Equatable {
     return {"email": email, "names": names, "lastNames": lastNames};
   }
 
+  User toEntity() {
+    return User(email: email, names: names, lastNames: lastNames);
+  }
+
   @override
   List<Object?> get props => [email, names, lastNames];
 }

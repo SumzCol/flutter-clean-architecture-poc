@@ -63,6 +63,8 @@ dev_dependencies:
   flutter_lints: ^1.0.0
   mockito: ^5.0.16
   mocktail: ^0.1.4
+  faker: ^2.0.0
+
   build_runner: ^2.1.2
   injectable_generator: ^1.5.2
   auto_route_generator: ^2.4.1
